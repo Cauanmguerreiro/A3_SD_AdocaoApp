@@ -60,12 +60,16 @@ local_settings.py
 # db.sqlite3-journal # Usando Oracle
 
 # Ignorar arquivos de migração dentro dos apps, exceto __init__.py, conforme solicitado
-apps/*/migrations/*.py
-!apps/*/migrations/__init__.py
+# A regra abaixo já cobre o solicitado para socialnetworks
+# apps/*/migrations/*.py
+# !apps/*/migrations/__init__.py
 
 media/
 staticfiles_build/
 staticfiles/
+__pycache__/
+apps/*/migrations/*.py
+!apps/*/migrations/__init__.py
 
 # Environments
 .env
