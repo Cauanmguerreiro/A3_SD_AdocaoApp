@@ -32,8 +32,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.products.apps.ProductsConfig',
-    'rest_framework',
-    'categories.apps.CategoriesConfig',  # Seu app categories dentro de apps/
+    'rest_framework', # Mova rest_framework para cima se outros apps dependerem dele na inicialização
+    'apps.categories.apps.CategoriesConfig',  # Ajustado para consistência, se aplicável
+    'apps.socialnetworks.apps.SocialnetworksConfig',
+    'apps.clients.apps.ClientsConfig',
+    'apps.orders.apps.OrdersConfig',
 ]
 
 MIDDLEWARE = [
